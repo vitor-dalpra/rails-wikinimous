@@ -1,0 +1,12 @@
+<h1>Wookieepedia</h1>
+
+<ol>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article) %>
+      | <%= article.content%>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to "Create a new article", new_article_path %>
